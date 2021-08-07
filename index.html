@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pig Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body class="changeBg">
+   
+    <div class="container">
+      <div class="cards card0">
+        <span class="dot-0 active"></span>
+        <div class="score Player0">Player 1</div>
+        <div id="score_p0" class="scoreVal">0</div>
+        <div class="curr curr0">
+          <span class="curr_text">Current</span>
+          <div id="curr_player0">0</div>
+        </div>
+      </div>
+      <div class="cards card1">
+        <span class="dot-1"></span>
+        <div class="score Player1">Player 2</div>
+        <div id="score_p1" class="scoreVal">0</div>
+        <div class="curr curr1">
+          <span class="curr_text">Current</span>
+          <div id="curr_player1">0</div>
+        </div>
+      </div>
+    </div>
+    <div class="containers">
+      <div class="modal hidden">
+        <button class="close-btn">&times;</button>
+          <div style="font-family: ubuntu; text-align:justify;">
+                       <b> What is pig game?</b>
+            <br>
+            <br>
+           Pig is a simple dice game first described in print by John Scarne in 1945.[1] Players take turns to roll a single die as many times as they wish, adding all roll results to a running total, but losing their gained score for the turn if they roll a 1.
+         <br>
+         <br>
+         <b>Gameplay:</b>
+         <br><br>
+          (To roll the dice press 🎲 button and to hold the score press HOLD button)
+          Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+        
+        <ul>
+          <li>
+          If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+          <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+          <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+          <li>The first player to score 100 or more points wins.</li>
+        </ul>
+          For example, the first player, Player1,begins a turn with a roll of 5. Player1 could hold and score 5 points, but chooses to roll again. Player1 rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Player1 rolls a 1, and must end his turn without scoring. The next player, Player2, rolls the sequence 4-5-3-5-5, after which Player2 chooses to hold, and adds Player2 turn total of 22 points to Player2 score.  
+          </div>
+      </div>
+      
+    <button class="show-modal btn--help">?</button>
+    <button class="btn btn--new">🔄</button>
+    <button class="btn btn--roll">
+      <img class="imgBtn" src="img/dice-1.png" alt="" />
+    </button>
+    <div class="amp">&amp</div>
+    <button class="btn btn--hold">Hold</button>
+    <h1 class="won"></h1>
+    <div class="overlay hidden">
+    </div>
+    <script src="script/script.js"></script>
+    <script src="script/overlay.js"></script>
+  </body>
+</html>

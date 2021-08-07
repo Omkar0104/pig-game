@@ -1,0 +1,227 @@
+body {
+  background-color: rgb(95 199 255 / 39%);
+  overflow-x: hidden;
+}
+.cards {
+  /* flex: 50%; */
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: #83fff765;
+  /* top: 5rem; */
+  height: 30rem;
+  width: 20rem;
+  /* border: 2px solid red; */
+  margin: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  resize: both;
+}
+.cards:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.container {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.scoreVal {
+  position: relative;
+  top: 5rem;
+  left: 2.5rem;
+  height: 4rem;
+  font-size: 4rem;
+}
+.curr {
+  position: absolute;
+  bottom: 1rem;
+  border: 2px solid red;
+  height: 5rem;
+  width: 15rem;
+  left: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.display {
+  display: flex;
+}
+.score {
+  height: 2rem;
+  position: relative;
+  left: 7rem;
+  top: 2rem;
+  font-size: 2rem;
+}
+#dice img {
+  position: absolute;
+  left: 37.5rem;
+  top: 13.5rem;
+  height: 5rem;
+  width: 5rem;
+  transition: width 0.1s, height 0.1s;
+}
+#dice img:hover {
+  height: 5.2rem;
+  width: 5.2rem;
+  left: 37.4rem;
+}
+.btn {
+  /* display: inline-block; */
+  position: absolute;
+  font-size: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  /* right: 10px; */
+}
+.btn--help{
+  position: absolute;
+  right: 1rem;
+  top: .5rem;
+  height: 40px;
+  width: 40px;
+  background: #ccc;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn--new {
+  top: 1.5rem;
+  left: 2rem;
+  border: none;
+  background: none;
+}
+.imgBtn {
+  height: 6rem;
+  width: 6rem;
+}
+.btn--roll {
+  top: 5.2rem;
+  background: none;
+  border: none;
+  right: 4.1rem;
+}
+.amp {
+  top: 13rem;
+  width: 11rem;
+  right: -2rem;
+  position: absolute;
+  font-size: 5rem;
+}
+.btn--hold {
+  top: 20rem;
+  width: 11rem;
+  right: 1.6rem;
+}
+.hidden {
+  display: none;
+}
+.rotate {
+  animation: mymove 1s;
+}
+@keyframes mymove {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.active {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 255, 42);
+  border-radius: 50%;
+  display: inline-block;
+}
+.winner {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: #45ff45b0;
+  bottom: 0.5rem;
+  height: 31rem;
+  width: 23rem;
+  /* border: 2px solid red; */
+  margin: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 9px -3px 5px 0 rgb(0 0 0 / 20%);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.changeBg {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.won {
+  position: absolute;
+    top: 9rem;
+    left: 24rem;
+    font-size: 3rem;
+}
+
+
+.containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.modal {
+  justify-items: center;
+    border: none;
+    border-radius: 23px;
+    width: 45rem;
+    height: 30rem;
+    padding: 1rem;
+    background: #ffffff;
+    z-index: 10;
+    position: absolute;
+    top: 2rem;
+}
+.close-btn {
+  position: relative;
+  left: 39.5rem;
+  border: none;
+  background: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.modal p {
+  padding: 30px;
+}
+.modal h1 {
+  margin-left: 223px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
