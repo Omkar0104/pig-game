@@ -10,7 +10,7 @@ var curr = 0;
 var activePlayer = 0;
 document.querySelector(".btn--roll").addEventListener("click", function () {
   var dice = Math.trunc(Math.random() * 6) + 1;
-
+  console.log(dice);
   document.querySelector(".btn--roll").classList.add("rotate");
   document.querySelector(".imgBtn").src = `img/dice-${dice}.png`;
   setInterval(function () {
